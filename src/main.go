@@ -140,7 +140,7 @@ func main() {
 		if config.Overwrite {
 			//上書きするためにエンコード前に削除
 			err = os.Remove(outputFileName)
-			if err != nil {
+			if err != nil && os.IsExist(err) {
 				fmt.Println("既存ファイルの削除に失敗しました。:" + err.Error())
 				continue
 			}

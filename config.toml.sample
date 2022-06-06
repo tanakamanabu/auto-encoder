@@ -1,0 +1,10 @@
+FfmpegPath = "C:\\ffmpeg\\bin\\ffmpeg.exe"
+EncodeCommand = "-c:v hevc_nvenc -qmin 28 -qmax 36 -vf bwdif=0:-1:1"
+SilenceCommand = "-af silencedetect=n=-60dB:d=20 -f null -"
+InputPath = "\\\\nas\\tv\\recorded"
+OutputPath = "\\\\nas\\tv"
+InputExt = ".m2ts"
+OutputExt = ".mp4"
+TargetThresholdSec = 100
+RemoveIfSuccess = true
+Overwrite = false
